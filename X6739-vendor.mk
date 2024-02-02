@@ -66,6 +66,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/chipinfo:$(TARGET_COPY_OUT_VENDOR)/bin/chipinfo \
     vendor/infinix/X6739/proprietary/vendor/bin/conninfra_loader:$(TARGET_COPY_OUT_VENDOR)/bin/conninfra_loader \
     vendor/infinix/X6739/proprietary/vendor/bin/dmc_core:$(TARGET_COPY_OUT_VENDOR)/bin/dmc_core \
+    vendor/infinix/X6739/proprietary/vendor/bin/em_hidl:$(TARGET_COPY_OUT_VENDOR)/bin/em_hidl \
     vendor/infinix/X6739/proprietary/vendor/bin/fpsgo:$(TARGET_COPY_OUT_VENDOR)/bin/fpsgo \
     vendor/infinix/X6739/proprietary/vendor/bin/frs:$(TARGET_COPY_OUT_VENDOR)/bin/frs \
     vendor/infinix/X6739/proprietary/vendor/bin/fuelgauged:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged \
@@ -322,6 +323,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/chipinfo_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/chipinfo_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/dmc_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmc_core.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/dts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dts.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/em_hidl_user.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/em_hidl_user.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fpsgo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fpsgo.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
@@ -1510,6 +1512,10 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.dmc@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.dmc@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.dmc@1.2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.engineermode@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.engineermode@1.1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.engineermode@1.2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.engineermode@1.3.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.lbs@1.0.so \
@@ -1560,6 +1566,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/thh/ta/df1edda8627911e980ae507b9d9a7e7d.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/df1edda8627911e980ae507b9d9a7e7d.ta
 
 PRODUCT_PACKAGES += \
+    EngineerMode \
     ImsService \
     mediatek-carrier-config-manager \
     mediatek-common \
