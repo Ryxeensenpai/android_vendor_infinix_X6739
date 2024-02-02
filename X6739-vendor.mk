@@ -316,17 +316,29 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/hw/init.stnfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.stnfc.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.app_defrag_ko.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.app_defrag_ko.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.bt_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.bt_drv.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.cccimdinit.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccimdinit.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.connfem.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.connfem.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.conninfra.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.conninfra.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.defrag_gc_ko.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.defrag_gc_ko.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.dev_gc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.dev_gc.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.fmradio_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fmradio_drv.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.fpsgo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fpsgo.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.frs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.frs.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.gps_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_drv.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.pnpmgr.fre.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pnpmgr.fre.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.read_ahead_ko.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.read_ahead_ko.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermal_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal_core.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermal_manager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal_manager.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermalloadalgod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermalloadalgod.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.tran_gc_ko.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tran_gc_ko.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.tranlog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tranlog.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.tranlogconfig.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tranlogconfig.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.vtservice_hidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_hidl.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/ipsec_mon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipsec_mon.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/lbs_hidl_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lbs_hidl_service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
