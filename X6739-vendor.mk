@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/audiocmdservice_atci:$(TARGET_COPY_OUT_VENDOR)/bin/audiocmdservice_atci \
     vendor/infinix/X6739/proprietary/vendor/bin/autobt:$(TARGET_COPY_OUT_VENDOR)/bin/autobt \
     vendor/infinix/X6739/proprietary/vendor/bin/bt_dump:$(TARGET_COPY_OUT_VENDOR)/bin/bt_dump \
+    vendor/infinix/X6739/proprietary/vendor/bin/conninfra_loader:$(TARGET_COPY_OUT_VENDOR)/bin/conninfra_loader \
     vendor/infinix/X6739/proprietary/vendor/bin/fuelgauged:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged \
     vendor/infinix/X6739/proprietary/vendor/bin/fuelgauged_nvram:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged_nvram \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service-mediatek \
@@ -49,15 +50,22 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek-64b \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-mediatekv2 \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service-lazy:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service-lazy \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/hostapd \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/tetheroffloadservice:$(TARGET_COPY_OUT_VENDOR)/bin/hw/tetheroffloadservice \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mms@1.6-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.nvram@1.1-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.trustonic.tee@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.trustonic.tee@1.1-service \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
     vendor/infinix/X6739/proprietary/vendor/bin/kmsetkey_ca.trustonic:$(TARGET_COPY_OUT_VENDOR)/bin/kmsetkey_ca.trustonic \
     vendor/infinix/X6739/proprietary/vendor/bin/mcDriverDaemon:$(TARGET_COPY_OUT_VENDOR)/bin/mcDriverDaemon \
+    vendor/infinix/X6739/proprietary/vendor/bin/netdagent:$(TARGET_COPY_OUT_VENDOR)/bin/netdagent \
     vendor/infinix/X6739/proprietary/vendor/bin/nvram_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/nvram_daemon \
     vendor/infinix/X6739/proprietary/vendor/bin/vpud:$(TARGET_COPY_OUT_VENDOR)/bin/vpud \
+    vendor/infinix/X6739/proprietary/vendor/bin/wifi_dump:$(TARGET_COPY_OUT_VENDOR)/bin/wifi_dump \
+    vendor/infinix/X6739/proprietary/vendor/bin/wlan_assistant:$(TARGET_COPY_OUT_VENDOR)/bin/wlan_assistant \
     vendor/infinix/X6739/proprietary/vendor/etc/AbnormalDisplayLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AbnormalDisplayLog_dynamic.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/VideoLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/VideoLog_dynamic.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
@@ -202,12 +210,17 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service-lazy.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/audiocmdservice_atci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/audiocmdservice_atci.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/dts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dts.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/netdagent.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netdagent.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/tee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/tetheroffloadservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tetheroffloadservice.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/trustonic.mc_kmsetkey_ca.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trustonic.mc_kmsetkey_ca.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trustonic.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc \
@@ -216,6 +229,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.trustonic.tee@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.1-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg \
     vendor/infinix/X6739/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
@@ -479,6 +493,8 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu5.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libvpud_vcodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpud_vcodec.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwpa_client.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/meta_wifi_data.so:$(TARGET_COPY_OUT_VENDOR)/lib/meta_wifi_data.so \
     vendor/infinix/X6739/proprietary/vendor/lib/mt6893/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/arm.graphics-V1-ndk_platform.so \
     vendor/infinix/X6739/proprietary/vendor/lib/mt6893/arm.graphics-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/arm.graphics-ndk_platform.so \
     vendor/infinix/X6739/proprietary/vendor/lib/mt6893/libaiselector.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/libaiselector.so \
@@ -501,6 +517,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.mms@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.mms@1.4.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.mms@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.mms@1.5.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.mms@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.mms@1.6.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.netdagent@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.nvram@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.nvram@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.nvram@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.nvram@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.pq@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.pq@2.0.so \
@@ -603,6 +620,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdre.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdts-eagle-shared.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdtsdsec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtsdsec.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libforkexecwrap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libforkexecwrap.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libformatter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libformatter.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgamehdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgamehdr.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libged.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libged.so \
@@ -614,6 +632,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_gp_client.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_uree.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhevce_sb.ca7.android.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libifcutils_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libifcutils_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimsg_log.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_ulit.so \
@@ -640,6 +659,10 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvcodecdrv_header_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcodecdrv_header_stub.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu5.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwifitest.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifitest.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/meta_wifi_data.so:$(TARGET_COPY_OUT_VENDOR)/lib64/meta_wifi_data.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/arm.graphics-V1-ndk_platform.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/arm.graphics-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/arm.graphics-ndk_platform.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/libDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/libDR.so \
@@ -667,6 +690,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.mms@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.mms@1.4.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.mms@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.mms@1.5.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.mms@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.mms@1.6.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.netdagent@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.nvram@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.nvram@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.0.so \
@@ -685,6 +709,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.7.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.8.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.8.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.9.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.wifi.hostapd@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.trustonic.tee.tui@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.trustonic.tee.tui@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.trustonic.tee@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.trustonic.tee@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.trustonic.tee@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.trustonic.tee@1.1.so \
