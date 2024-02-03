@@ -89,6 +89,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-mediatekv2 \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.vibrator-service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.vibrator-service.mediatek \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service-lazy:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service-lazy \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/camerahalserver:$(TARGET_COPY_OUT_VENDOR)/bin/hw/camerahalserver \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/hostapd \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/mtkfusionrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/mtkfusionrild \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/tetheroffloadservice:$(TARGET_COPY_OUT_VENDOR)/bin/hw/tetheroffloadservice \
@@ -101,12 +102,17 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.mediatek.hardware.tranHwInfo@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.tranHwInfo@1.0-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.tne@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.tne@1.0-service \
+    vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vendor.trustonic.tee@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.trustonic.tee@1.1-service \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/vtservice_hidl:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vtservice_hidl \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
     vendor/infinix/X6739/proprietary/vendor/bin/ipsec_mon:$(TARGET_COPY_OUT_VENDOR)/bin/ipsec_mon \
+    vendor/infinix/X6739/proprietary/vendor/bin/jpegtool:$(TARGET_COPY_OUT_VENDOR)/bin/jpegtool \
     vendor/infinix/X6739/proprietary/vendor/bin/kmsetkey_ca.trustonic:$(TARGET_COPY_OUT_VENDOR)/bin/kmsetkey_ca.trustonic \
     vendor/infinix/X6739/proprietary/vendor/bin/lbs_hidl_service:$(TARGET_COPY_OUT_VENDOR)/bin/lbs_hidl_service \
+    vendor/infinix/X6739/proprietary/vendor/bin/lib3a.ccu.ddr:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.ddr \
+    vendor/infinix/X6739/proprietary/vendor/bin/lib3a.ccu.dm:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.dm \
+    vendor/infinix/X6739/proprietary/vendor/bin/lib3a.ccu.pm:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.pm \
     vendor/infinix/X6739/proprietary/vendor/bin/mcDriverDaemon:$(TARGET_COPY_OUT_VENDOR)/bin/mcDriverDaemon \
     vendor/infinix/X6739/proprietary/vendor/bin/md_monitor:$(TARGET_COPY_OUT_VENDOR)/bin/md_monitor \
     vendor/infinix/X6739/proprietary/vendor/bin/meta_tst:$(TARGET_COPY_OUT_VENDOR)/bin/meta_tst \
@@ -130,6 +136,549 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/vpud:$(TARGET_COPY_OUT_VENDOR)/bin/vpud \
     vendor/infinix/X6739/proprietary/vendor/bin/wifi_dump:$(TARGET_COPY_OUT_VENDOR)/bin/wifi_dump \
     vendor/infinix/X6739/proprietary/vendor/bin/wlan_assistant:$(TARGET_COPY_OUT_VENDOR)/bin/wlan_assistant \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/teethLookup1521686473598/teethLookup000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/teethLookup1521686473598/teethLookup000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/teethMask1521686473602/teethMask000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_BrightenTeeth/teethMask1521686473602/teethMask000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/smoothmask/facemask000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/FaceMakeupV2_FaceuEyeDetail/smoothmask/facemask000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_4Items/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_4Items/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/generalEffect.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/generalEffect.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/contrast_max.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/contrast_max.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/contrast_min.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/contrast_min.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/faceMask.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/faceMask.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/foundation_filter.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/resource/foundation_filter.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/Beauty.frag:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/Beauty.frag \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/Beauty.vert:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/Beauty.vert \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/contrast_enhance.frag:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/contrast_enhance.frag \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/contrast_enhance.vert:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/contrast_enhance.vert \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_alpha_boxblur.fs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_alpha_boxblur.fs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_boxblur.fs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_boxblur.fs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_epm.fs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_epm.fs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_var.fs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/fshader_var.fs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/vshader_boxblur.vs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/vshader_boxblur.vs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/vshader_epm.vs:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/GeneralEffect_smooth_whiten/generalEffect/shader/vshader_epm.vs \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/beauty_Android_lite/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/beauty_Android_lite/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/license/labcv_test_20220422_20360522_INFINIX_MOBILITY_LIMITED_TECNO_MOBILE_4.2.3.licbag:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/license/labcv_test_20220422_20360522_INFINIX_MOBILITY_LIMITED_TECNO_MOBILE_4.2.3.licbag \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/hairparser/tt_hair_v11.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/hairparser/tt_hair_v11.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceattrmodel/tt_beauty_attr6_v2.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceattrmodel/tt_beauty_attr6_v2.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_extra_v3.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_extra_v3.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_v7.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_v7.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_v7.1.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_attribute_v7.1.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_beauty_v5.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceattrmodel/tt_face_beauty_v5.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfacemodel/tt_face_extra_tob_v13.2.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfacemodel/tt_face_extra_tob_v13.2.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfacemodel/tt_face_v10.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfacemodel/tt_face_v10.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/model/ttfaceverify/tt_faceverify_v7.0.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/model/ttfaceverify/tt_faceverify_v7.0.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/reshape_live/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/reshape_live/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/reshape_live/distortionFaceu_test/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/reshape_live/distortionFaceu_test/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/reshape_live/distortionFaceu_test/represent_Plasticine.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/reshape_live/distortionFaceu_test/represent_Plasticine.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/reshape_live/distortionFaceu_test/represent_Plasticine_organs.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/reshape_live/distortionFaceu_test/represent_Plasticine_organs.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/reshape_live/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/reshape_live/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips2/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/lips2/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/charmpurple/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/charmpurple/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips2/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/lips2/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/firstlove/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/firstlove/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/normal2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/FaceMakeupV2_bytool/normal2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/metrosexual/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/metrosexual/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips2/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/lips2/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nativemuscle/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nativemuscle/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/neptune/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/neptune/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/normal2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/normal2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/nude/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/nude/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/normal2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/normal2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/peacockblue/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/peacockblue/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/normal2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/normal2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/qianjin/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/qianjin/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/fragShader.glsl.tmp \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader2/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader2/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader2/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lipShader2/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips2/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/lips2/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/ruby/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/ruby/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader_blend0/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/bluhserShader_blend0/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/blusher2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/blusher2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eye/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eye/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeScreenShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeScreenShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyeShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eye_screen/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eye_screen/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyelash/eye000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/eyelash/eye000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/facialfeatures/facialfeatures000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lipShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lipShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lipShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lipShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lips1/lips0000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lips1/lips0000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lips1/lips0001.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/lips1/lips0001.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/mask/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/mask/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/normal2/blusher000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/normal2/blusher000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilBlend000000_1534227099/pupilBlend000000002.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilMask000000_1534227099/pupilMask000000000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilShader/fragShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilShader/fragShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilShader/vertShader.glsl:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/FaceMakeupV2_bytool/pupilShader/vertShader.glsl \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/script/FaceMakeup.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/script/FaceMakeup.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/venus/script/Filter.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/venus/script/Filter.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/.DS_Store:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/.DS_Store \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/FaceMakeupV2/texcoord.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/FaceMakeupV2/texcoord.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/content.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/content.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/eyepart2998/eyepart2998_000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/eyepart2998/eyepart2998_000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/makeup.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/makeup.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mask2996/mask2996_000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mask2996/mask2996_000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mask2997/mask2997_000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mask2997/mask2997_000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mouthPart_res2999/mouthPart_res2999_000.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/FaceMakeupV2_2999/mouthPart_res2999/mouthPart_res2999_000.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/config.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/config.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/event.lua:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/event.lua \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/bemakeup/style_makeup/zhigan/trigger.json:$(TARGET_COPY_OUT_VENDOR)/data/camera/bemakeup/style_makeup/zhigan/trigger.json \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/0.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/0.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/10.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/10.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/11.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/11.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/12.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/12.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/2.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/2.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/3.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/3.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/4.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/4.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/5.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/5.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/6.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/6.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/7.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/7.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/8.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/8.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/9.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/9.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/person_lut/0.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/person_lut/0.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/colorEnhance/person_lut/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/person_lut/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/2.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/2.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/3.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/3.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/4.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/4.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/5.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/5.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/6.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/6.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/7.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/7.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/8.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/8.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/black/readme.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/black/readme.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/2.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/2.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/3.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/3.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/4.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/4.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/5.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/5.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/6.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/6.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/7.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/7.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/8.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/8.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/brown/readme.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/brown/readme.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/2.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/2.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/3.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/3.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/4.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/4.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/5.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/5.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/6.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/6.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/7.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/7.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/8.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/8.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/default/readme.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/default/readme.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/1.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/2.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/2.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/3.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/3.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/4.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/4.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/5.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/5.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/6.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/6.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/7.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/7.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/8.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/8.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/lut/videofilter/white/readme.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/videofilter/white/readme.txt \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/M_Segment_DoubleLoss_V1.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/M_Segment_DoubleLoss_V1.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/Transsion_Segment_Pre.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/Transsion_Segment_Pre.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/animal_human_landmark_fp16.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/animal_human_landmark_fp16.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/capture_sky.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/capture_sky.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/eyes_detect_model:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/eyes_detect_model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/facerecheck.bin:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/facerecheck.bin \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/facerecheck.param:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/facerecheck.param \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/facesr_hd_composite_ref_single_4.5.11_mtkg77_apu_res_1280.model:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/facesr_hd_composite_ref_single_4.5.11_mtkg77_apu_res_1280.model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lightforgender_addindian_tf113_test5.tflite:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lightforgender_addindian_tf113_test5.tflite \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lightforgender_addindian_tf113_test5_converted.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lightforgender_addindian_tf113_test5_converted.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lightforgenderandage_tf113_test4.tflite:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lightforgenderandage_tf113_test4.tflite \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lightforgenderandage_tf113_test4_converted.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lightforgenderandage_tf113_test4_converted.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_aurora.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_aurora.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_dusk.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_dusk.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_meteor.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_meteor.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_moon.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_moon.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_rainbow.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_rainbow.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_river.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_river.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_starry.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_starry.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_startrail.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_startrail.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_sunset.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_sunset.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_sunset2.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_sunset2.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_sunshine.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_sunshine.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/lut_sunshine2.png:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/lut_sunshine2.png \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/cache_data:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/cache_data \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/capture_cache:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/capture_cache \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/capture_model:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/capture_model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/capture_policy:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/capture_policy \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/dof_mecp.bin:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/dof_mecp.bin \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/preview_cache:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/preview_cache \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/preview_model:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/preview_model \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/megii_dualcam/preview_policy:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/megii_dualcam/preview_policy \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/Paris06.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/Paris06.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/abao.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/abao.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/heijin01.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/heijin01.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/heijin02.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/heijin02.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/landiao.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/landiao.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/saibo.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/saibo.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/meishefilter/youhua.mslut:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/meishefilter/youhua.mslut \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/morpho_hdsr_tuning_params.xml:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/morpho_hdsr_tuning_params.xml \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky.mnn:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky.mnn \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_aurora.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_aurora.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_dusk.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_dusk.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_meteor.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_meteor.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_moon.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_moon.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_rainbow.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_rainbow.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_river.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_river.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_starry.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_starry.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_startrail.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_startrail.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_sunset.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_sunset.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_sunset2.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_sunset2.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_sunshine.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_sunshine.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/preview_sky_sunshine2.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/preview_sky_sunshine2.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/scene.tflite:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/scene.tflite \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/segment.tflite:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/segment.tflite \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/segmentPre.tflite:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/segmentPre.tflite \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_aurora.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_aurora.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_dusk.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_dusk.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_meteor.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_meteor.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_moon.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_moon.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_rainbow.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_rainbow.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_river.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_river.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_starry.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_starry.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_startrail.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_startrail.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_sunset.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunset.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_sunset2.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunset2.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_sunshine.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunshine.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/model/sky_sunshine2.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunshine2.jpg \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/morpho/morpho_calibration_video.bin:$(TARGET_COPY_OUT_VENDOR)/data/camera/morpho/morpho_calibration_video.bin \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/vidhance/vidhance.lic:$(TARGET_COPY_OUT_VENDOR)/data/camera/vidhance/vidhance.lic \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/vidhance/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/data/camera/vidhance/vidhance_calibration \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_1280x720.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1280x720.nv21 \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_1280x720.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1280x720.yuyv \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_1920x1080.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1920x1080.nv21 \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_1920x1080.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1920x1080.yuyv \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_2560x1440.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_2560x1440.nv21 \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_2560x1440.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_2560x1440.yuyv \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_3840x2160.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_3840x2160.nv21 \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_3840x2160.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_3840x2160.yuyv \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_640x480.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_640x480.nv21 \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_640x480.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_640x480.yuyv \
+    vendor/infinix/X6739/proprietary/vendor/data/camera/watermark/watermark_config:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_config \
     vendor/infinix/X6739/proprietary/vendor/etc/.tp/.ht120.mtc:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.ht120.mtc \
     vendor/infinix/X6739/proprietary/vendor/etc/.tp/.thermal_policy_03:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.thermal_policy_03 \
     vendor/infinix/X6739/proprietary/vendor/etc/.tp/.thermal_policy_08:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.thermal_policy_08 \
@@ -137,6 +686,14 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/.tp/thermal.off.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.off.conf \
     vendor/infinix/X6739/proprietary/vendor/etc/AbnormalDisplayLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AbnormalDisplayLog_dynamic.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/VideoLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/VideoLog_dynamic.xml \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/cache_s5kgd2sp_17201766_front_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/cache_s5kgd2sp_17201766_front_d1300 \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/cache_s5khm6sx_17201842_back_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/cache_s5khm6sx_17201842_back_d1300 \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/dgain_mask_s5kgd2sp_17201766_front_d1300.bin:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/dgain_mask_s5kgd2sp_17201766_front_d1300.bin \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/dgain_mask_s5khm6sx_17201842_back_d1300.bin:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/dgain_mask_s5khm6sx_17201842_back_d1300.bin \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/siq_ocl_cache_s5kgd2sp_17201766_front_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/siq_ocl_cache_s5kgd2sp_17201766_front_d1300 \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/siq_ocl_cache_s5khm6sx_17201842_back_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/siq_ocl_cache_s5khm6sx_17201842_back_d1300 \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/superiq_model_s5kgd2sp_17201766_front_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/superiq_model_s5kgd2sp_17201766_front_d1300 \
+    vendor/infinix/X6739/proprietary/vendor/etc/anc_siq/superiq_model_s5khm6sx_17201842_back_d1300:$(TARGET_COPY_OUT_VENDOR)/etc/anc_siq/superiq_model_s5khm6sx_17201842_back_d1300 \
     vendor/infinix/X6739/proprietary/vendor/etc/apdb/APDB_MT6885_S01__W2313:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6885_S01__W2313 \
     vendor/infinix/X6739/proprietary/vendor/etc/apdb/APDB_MT6885_S01__W2313_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6885_S01__W2313_ENUM \
     vendor/infinix/X6739/proprietary/vendor/etc/armnn_app.config:$(TARGET_COPY_OUT_VENDOR)/etc/armnn_app.config \
@@ -253,6 +810,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/audio_param/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_AudioParam.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
+    vendor/infinix/X6739/proprietary/vendor/etc/cam3atms_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cam3atms_profiles.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/dar_thermal_core/thermal_core_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/dar_thermal_core/thermal_core_config.json \
     vendor/infinix/X6739/proprietary/vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_44.bin \
     vendor/infinix/X6739/proprietary/vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_48.bin \
@@ -320,6 +878,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/atcid.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/atcid.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/audiocmdservice_atci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/audiocmdservice_atci.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/bootperf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/bootperf.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/chipinfo_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/chipinfo_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/dmc_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmc_core.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/dts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dts.rc \
@@ -377,6 +936,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.mediatek.hardware.tranHwInfo@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.tranHwInfo@1.0-service.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vendor.trustonic.tee@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.1-service.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/vibrator-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vibrator-mtk-default.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
@@ -871,6 +1431,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/infinix/X6739/proprietary/vendor/etc/smsdbvisitor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/smsdbvisitor.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
+    vendor/infinix/X6739/proprietary/vendor/etc/tran_camprofiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/tran_camprofiles.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/virtual-spn-conf-by-efgid1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efgid1.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/virtual-spn-conf-by-efpnn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efpnn.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/virtual-spn-conf-by-efspn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efspn.xml \
@@ -1005,6 +1566,8 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/egl/libMEOW_qt.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libMEOW_qt.so \
     vendor/infinix/X6739/proprietary/vendor/lib/egl/libMEOW_trace.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libMEOW_trace.so \
     vendor/infinix/X6739/proprietary/vendor/lib/egl/mt6893/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/mt6893/libGLES_mali.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/gc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/gc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/gc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/gc02m1macro_mipi_raw_tuning.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/android.hardware.thermal@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.thermal@2.0-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/audio.primary.mt6893.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6893.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/audio.r_submix.mt6893.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.mt6893.so \
@@ -1021,16 +1584,238 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/thermal_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/thermal_hal.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/lib3a.af.assist.models.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib3a.af.assist.models.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/lib3a.aishutter.models.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib3a.aishutter.models.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libAVCSecureVencCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAVCSecureVencCA.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_gc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_gc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_gc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_gc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_gc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcgc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcgc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcgc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcgc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcgc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcgc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcgc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcgc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcgc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcgc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Production_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Production_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Production_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Production_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Panorama.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_ScreenTorch.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_ScreenTorch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_torch.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Super_Flash_torch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Video_2K.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Video_2K.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom3_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom3_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pblcs5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pblcs5khm6sxmipiraw_Video_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbrogc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbrogc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbrogc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbrogc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbrogc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbrogc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbrogc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbrogc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbrogc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbrogc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_pbros5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_pbros5khm6sxmipiraw_Video_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Production_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Production_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Production_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Production_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Scene_Panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Scene_Panorama.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Super_Flash_ScreenTorch.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Super_Flash_ScreenTorch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Super_Flash_torch.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Super_Flash_torch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Video_2K.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Video_2K.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Capture_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom3_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Preview_Zoom3_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libCamera_s5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_s5khm6sxmipiraw_Video_Zoom2.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDefaultFpsActor.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFrameRecord.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libHEVCdec_sa.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib/libHEVCdec_sa.ca7.android.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libJpgEncPipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libJpgEncPipe.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libMcClient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMcClient.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libMtkOmxAdpcmDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxAdpcmDec.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libMtkOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxAlacDec.so \
@@ -1083,6 +1868,8 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/libbluetoothem_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetoothem_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libcam.halsensor.hwintegration.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam.halsensor.hwintegration.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libcam3_transerverengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam3_transerverengine.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libcapctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapctrl.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libcares_naptr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcares_naptr.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libcarrierconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcarrierconfig.so \
@@ -1124,11 +1911,15 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/libh264dec_sd.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_sd.ca7.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libh264dec_se.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_se.ca7.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libh264enc_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264enc_sa.ca7.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libhdrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdrvideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhevce_sb.ca7.android.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libicd_decoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libicd_decoder.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimsg_log.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_ulit.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libipsec_ims_shr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libipsec_ims_shr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libjpeg-alpha-oal_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeg-alpha-oal_vendor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libjpeg-alpha_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeg-alpha_vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libladder.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmml.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmnetlink_v104.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmnetlink_v104.so \
@@ -1138,6 +1929,11 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmsbc_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtcloader.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmtkares.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkares.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libmtkcam.atmseventmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam.atmseventmgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libmtkcam.eventcallback.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam.eventcallback.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libmtkcam_debugutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam_debugutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libmtkcam_stdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam_stdutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/libmtkcam_ulog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam_ulog.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmtkcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcutils.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmtkhardware_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkhardware_legacy.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libmtklimiter_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtklimiter_vendor.so \
@@ -1164,6 +1960,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqpconfig.so \
     vendor/infinix/X6739/proprietary/vendor/lib/librcs_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/librcs_interface.so \
     vendor/infinix/X6739/proprietary/vendor/lib/librcs_volte_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/librcs_volte_core.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/librgbwlightsensor.so:$(TARGET_COPY_OUT_VENDOR)/lib/librgbwlightsensor.so \
     vendor/infinix/X6739/proprietary/vendor/lib/librt_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib/librt_extamp_intf.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensorndkbridge.so \
     vendor/infinix/X6739/proprietary/vendor/lib/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeech_enh_lib.so \
@@ -1205,6 +2002,16 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/mt6893/libnir_neon_driver.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/libnir_neon_driver.so \
     vendor/infinix/X6739/proprietary/vendor/lib/mt6893/libpq_prot.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/libpq_prot.so \
     vendor/infinix/X6739/proprietary/vendor/lib/nfc_nci.st21nfc.st.so:$(TARGET_COPY_OUT_VENDOR)/lib/nfc_nci.st21nfc.st.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pblcgc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pblcgc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pblcgc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pblcgc02m1macro_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pblcs5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pblcs5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pblcs5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pblcs5khm6sx_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pbrogc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pbrogc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pbrogc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pbrogc02m1macro_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pbros5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pbros5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/pbros5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/pbros5khm6sx_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/s5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/s5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/s5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/s5khm6sx_mipi_raw_tuning.so \
     vendor/infinix/X6739/proprietary/vendor/lib/soundfx/libaudiopreprocessing_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib/soundfx/libdtsaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdtsaudio.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.apmonitor@2.0.so \
@@ -1213,6 +2020,9 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.audio@7.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.audio@7.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.camera.atms@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.camera.atms@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.mdmonitor@1.0.so \
@@ -1248,6 +2058,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.pq@2.9.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.pq@2.9.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.rcs@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.rcs@2.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.videotelephony@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib/vendor.transsion.hardware.trancam.trancamserver@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.transsion.hardware.trancam.trancamserver@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/APUWareApusysServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareApusysServer.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/APUWareHmpServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareHmpServer.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/APUWareUtilsServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareUtilsServer.so \
@@ -1263,7 +2074,12 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/egl/libMEOW_qt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_qt.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/egl/libMEOW_trace.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_trace.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/egl/mt6893/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/mt6893/libGLES_mali.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/gc02m1_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/gc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/gc02m1macro_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1macro_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/gc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1macro_mipi_raw_tuning.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss-impl-mediatek.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so \
@@ -1285,6 +2101,10 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/thermal_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/thermal_hal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so \
@@ -1292,29 +2112,335 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/lbs_hidl_service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lbs_hidl_service-impl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.ae.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.core.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.ae.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.ae.stat.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.stat.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.af.assist.models.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.assist.models.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.af.assist.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.assist.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.af.assist.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.assist.utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.af.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.core.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.aishutter.models.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.aishutter.models.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.alsflicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.alsflicker.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.awb.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.awb.core.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.ccudrv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ccudrv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.ccuif.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ccuif.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.custom.ae.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.custom.ae.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.dce.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.dce.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.flicker.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.gma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.gma.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.lce.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.lce.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.log.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.n3d3a.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.n3d3a.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.sensors.color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.sensors.color.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib3a.sensors.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.sensors.flicker.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libAVCSecureVencCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAVCSecureVencCA.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_gc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_gc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_gc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_gc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_gc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcgc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcgc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcgc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcgc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcgc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcgc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcgc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcgc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcgc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcgc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Production_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Production_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Production_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Production_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Panorama.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_ScreenTorch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_ScreenTorch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_torch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Super_Flash_torch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Video_2K.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Video_2K.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Capture_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom3_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Preview_Zoom3_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pblcs5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pblcs5khm6sxmipiraw_Video_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbrogc02m1macromipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbrogc02m1macromipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbrogc02m1macromipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbrogc02m1macromipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbrogc02m1macromipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbrogc02m1macromipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbrogc02m1mipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbrogc02m1mipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbrogc02m1mipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbrogc02m1mipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_pbros5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_pbros5khm6sxmipiraw_Video_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_360VideoHDR_1080P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_360VideoHDR_1080P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_360VideoHDR_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_360VideoHDR_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Default_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Default_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Default_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Default_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Default_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Default_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_FaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_FaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_FilmVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_FilmVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_HDR_MINUS_EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_HDR_MINUS_EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_LLHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_LLHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Production_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Production_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Production_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Production_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Scene_Panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Scene_Panorama.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_ShortVideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_ShortVideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_ShortVideo_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_ShortVideo_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_SlimVideo_120Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_SlimVideo_120Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_SlimVideo_240Fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_SlimVideo_240Fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_Screen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_Screen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_ScreenTorch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_ScreenTorch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_torch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Super_Flash_torch.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Video_1080P_30fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Video_1080P_30fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Video_1080P_60fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Video_1080P_60fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Video_2K.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Video_2K.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Video_720P.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Video_720P.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5kgd2spmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5kgd2spmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_360HDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_360HDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_3rd_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_3rd_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_3rd_Capture_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_3rd_Capture_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_3rd_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_3rd_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_3rd_Preview_FD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_3rd_Preview_FD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Boken_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Boken_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Capture_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Flash_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Flash_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_NHDR_0EV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_NHDR_0EV.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom2_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom2_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom3_TDT.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Preview_Zoom3_TDT.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Pro_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Pro_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Pro_scene.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Pro_scene.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Resolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Resolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Resolution_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Resolution_zoom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture_4cell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture_4cell.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture_Remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Scene_Capture_Remosaic.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Scene_PreFlash_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Scene_PreFlash_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Scene_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Scene_Preview.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_SuperNight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_SuperNight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Super_Flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Super_Flash.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_1080p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_1080p.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_120fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_120fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_240fps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_240fps.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_2k.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_2k.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_EIS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_EIS.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_Zoom1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_Zoom1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libCamera_s5khm6sxmipiraw_Video_Zoom2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_s5khm6sxmipiraw_Video_Zoom2.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDefaultFpsActor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFrameRecord.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libImageEval.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libImageEval.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libJpgEncPipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libJpgEncPipe.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libMcClient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMcClient.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libMtkOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkOmxCore.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libMtkSpeechEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkSpeechEnh.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNoFpsActor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libNvLutEffect_arm64-v8a.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNvLutEffect_arm64-v8a.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSQLiteModule_VER_ALL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSQLiteModule_VER_ALL.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX230PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX230PdafLibrary.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX230PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX230PdafLibraryWrapper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX338PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX338PdafLibrary.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX338PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX338PdafLibraryWrapper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX386PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX386PdafLibrary.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX386PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX386PdafLibraryWrapper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX519PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX519PdafLibrary.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libSonyIMX519PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX519PdafLibraryWrapper.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libTEECommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTEECommon.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranASD.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranASD.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranArcFilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranArcFilter.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranArcFlashNew.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranArcFlashNew.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranArcHDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranArcHDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranArcLLHDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranArcLLHDR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranArcNightHawk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranArcNightHawk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranAutoColorLevel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranAutoColorLevel.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranBefMakeup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranBefMakeup.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranColorEnhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranColorEnhance.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranDenoise.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranDenoise.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranExtImgProc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranExtImgProc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranEyeDetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranEyeDetect.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranGenderDetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranGenderDetect.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranHumanLight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranHumanLight.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranITDFaceBeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranITDFaceBeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranMSFilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranMSFilter.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranMagicSky.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranMagicSky.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranMegDualDepth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranMegDualDepth.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranMegDualDepthtoBokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranMegDualDepthtoBokeh.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranMegDualRefocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranMegDualRefocus.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranPlatHW.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranPlatHW.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranSTPRRepair.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranSTPRRepair.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranSTSingleBlur.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranSTSingleBlur.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranSlimBody.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranSlimBody.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranSmartDetection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranSmartDetection.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranSuperResolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranSuperResolution.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTranVideoFilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTranVideoFilter.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTran_Log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTran_Log.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libTran_mtkPowerAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTran_mtkPowerAPI.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libWaterMarkProc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libWaterMarkProc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/lib_bsscore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bsscore.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/lib_iir.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_iir.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/lib_speech_enh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_speech_enh.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaaa_ltm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaaa_ltm.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaaa_ltmx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaaa_ltmx.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libaal_cust.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_cust.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libaal_key.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_key.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libaal_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libaalservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaalservice.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libadpcmdec_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadpcmdec_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libaedv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaedv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaiawb_moon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiawb_moon.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaiawb_moon_model.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiawb_moon_model.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaiawb_p1ggm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiawb_p1ggm.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaiawb_sun.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiawb_sun.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaiawb_sun_model.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiawb_sun_model.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaibc_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaibc_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaibc_tuning_p2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaibc_tuning_p2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaibc_tuning_p3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaibc_tuning_p3.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libaidepth_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidepth_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libainrcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libainrcore.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libamipengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libamipengine.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libanc_dc_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_dc_base.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libanc_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_hdr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libanc_hdr_adapter_s5kgd2sp_17201766_front_d1300.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_hdr_adapter_s5kgd2sp_17201766_front_d1300.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libanc_hdr_adapter_s5khm6sx_17201842_back_d1300.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_hdr_adapter_s5khm6sx_17201842_back_d1300.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libancbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libancbase.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libancbase_848.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libancbase_848.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libapmonitor_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapmonitor_vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libappgamepq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappgamepq.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libapu_mdw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapu_mdw.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libapu_mdw_batch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapu_mdw_batch.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libapusys.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapusys.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libapusys_edma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapusys_edma.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_low_light_hdr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libarcsoft_night_hawk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_night_hawk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libarcsoft_torch_portrait_night.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_torch_portrait_night.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libarmnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarmnn.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libarmnn_ndk.mtk.vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarmnn_ndk.mtk.vndk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libasn1c_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1c_core.so \
@@ -1342,6 +2468,67 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libbluetoothem_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetoothem_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.afhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.afhal.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.chdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.chdr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.feature_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.feature_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.cctsvr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.cctsvr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.log.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.ae.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.ae.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.ai3a.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.ai3a.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.awb.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.dng.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.dng.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.fsmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.fsmgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.lscMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.lscMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.lsctbl.50.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.lsctbl.50.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.nvram.50.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.nvram.50.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.platform.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.resultpool.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.resultpool.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.hal3a.v3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.halisp.buf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halisp.buf.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.halisp.common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halisp.common.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.halisp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halisp.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.halsensor.hwintegration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.hwintegration.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.iopipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.iopipe.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.isptuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.isptuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.pdtblgen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.pdtblgen.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.seninfn3d.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.seninfn3d.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.tuning.cache.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.tuning.cache.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.utils.sensorprovider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.utils.sensorprovider.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam.vhdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.vhdr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam3_tranelapsedtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam3_tranelapsedtime.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam3_tranpriorityctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam3_tranpriorityctrl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam3_transerverengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam3_transerverengine.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcam3atms_profiles.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam3atms_profiles.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.3dnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.3dnr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.aibc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.aibc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.aidepth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.aidepth.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.aihdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.aihdr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.ainr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.ainr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.dngop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.dngop.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.eis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.eis.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.fdft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.fdft.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.fsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.fsc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.gyro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.gyro.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.ispfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.ispfeature.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.lmv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.lmv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.lsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.lsc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.mfnr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.n3d.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.n3d.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.nr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.nr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.platform.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.platform2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.platform2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.rotate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.rotate.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.utility.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.utility.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.vaidepth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.vaidepth.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.vsf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.vsf.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamalgo.warp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.warp.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamdrv_imem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_imem.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamdrv_isp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_isp.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamdrv_tuning_mgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_tuning_mgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcamdrv_twin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_twin.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcameracustom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcameracustom.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcapctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapctrl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcares_naptr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcares_naptr.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcarrierconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcarrierconfig.so \
@@ -1358,15 +2545,34 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_soft_mtk_msadpcmdec.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcodec2_vpp_qt_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vpp_qt_plugin.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcodec2_vpp_rs_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vpp_rs_plugin.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcolorenhance_64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcolorenhance_64.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcolorlevel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcolorlevel.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcomposer_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcomposer_ext.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libconnfem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconnfem.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcs_cs35l45_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcs_cs35l45_intf.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcustom_nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcustom_nvram.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcvface_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvface_api.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvsd_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdecrypt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdecrypt.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libdenoise.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdenoise.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libdip_drv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdip_drv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libdip_imem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdip_imem.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libdip_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdip_postproc.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdre.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdts-eagle-shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdts-eagle-shared.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libdtsdsec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtsdsec.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libeffect_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffect_hal.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libeffecthal.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffecthal.base.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libeyedetector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeyedetector.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfacesattribute.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfacesattribute.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature.face.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.face.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature.stereo.provider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.stereo.provider.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature.vsdof.hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.vsdof.hal.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature_3dnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_3dnr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature_fsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_fsc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature_lmv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_lmv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeature_rss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_rss.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libfeatureiodrv_mem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeatureiodrv_mem.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libfile_op.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfile_op.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libforkexecwrap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libforkexecwrap.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libformatter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libformatter.so \
@@ -1380,33 +2586,113 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_gp_client.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_uree.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libhdrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrvideo.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libheichal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libheichal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhevce_sb.ca7.android.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libhfmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhfmanager.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libhwm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwm.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libicd_decoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libicd_decoder.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libifcutils_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libifcutils_mtk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libimagebuffer_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimagebuffer_wrapper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libimageio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libimageio_plat_drv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio_plat_drv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libimageio_plat_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio_plat_pipe.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimsg_log.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_ulit.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libipsec_ims_shr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipsec_ims_shr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libitdfacebeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libitdfacebeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libjpeg-alpha-oal_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeg-alpha-oal_vendor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libjpeg-alpha_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeg-alpha_vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libkmsetkey.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkmsetkey.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libksensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libksensor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libladder.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/liblpcnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblpcnr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmagicsky_64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmagicsky_64.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmfllcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmfllcore.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libminizip.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libminizip.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmipc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmipc.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmmagent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmagent.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmml.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmnetlink_v104.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmnetlink_v104.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmorpho_HDSR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_HDSR.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmorpho_video_stabilizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_video_stabilizer.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmp3dec_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmp3dec_mtk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsbc_mtk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmsnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsnr.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtcloader.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtk-fusion-ril-prop-vsim.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk-fusion-ril-prop-vsim.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtk-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk-ril.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkares.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkares.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.atmseventmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.atmseventmgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.eventcallback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.eventcallback.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.featurepipe.capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.featurepipe.depthmap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.depthmap.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.featurepipe.streaming.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.streaming.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.featurepipe.vsdof_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.vsdof_util.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam.logicalmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.logicalmodule.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_3rdparty.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.core.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_3rdparty.customer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.customer.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_3rdparty.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.mtk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_3rdparty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_calibration_convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_calibration_convertor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_calibration_provider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_calibration_provider.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_debugutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_debugutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_device3_app.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_app.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_device3_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hal.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_device3_hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hidl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_device3_hidlutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hidlutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_device3_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_devicesessionpolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_devicesessionpolicy.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_diputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_diputils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_exif.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_exif.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_fdvt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_fdvt.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_featurepolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_featurepolicy.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_featureutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_featureutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_fwkutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_fwkutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_grallocutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_grallocutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_hwnode.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_hwnode.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_hwutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_hwutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_imgbuf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_imgbuf.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_mapping_mgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_mapping_mgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_metadata.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_metastore.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_mfb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_mfb.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_modulefactory_aaa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_aaa.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_modulefactory_custom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_custom.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_modulefactory_drv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_drv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_modulefactory_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_modulehelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulehelper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_owe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_owe.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipeline.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipeline.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipeline_fbm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipeline_fbm.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_adapter.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_capture.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_isp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_isp.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_session.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinemodel_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_zsl.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-aov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-aov.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-security.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-security.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-smvr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-smvr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinepolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_pipelinepolicy_factory.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy_factory.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_prerelease.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_prerelease.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_rsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_rsc.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_scenariorecorder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_scenariorecorder.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_stdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_stdutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_streamutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_streamutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_synchelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_synchelper.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_sysutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_sysutils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_tuning_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_tuning_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcam_ulog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_ulog.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfig.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkconfigutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfigutils.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcutils.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkhardware_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkhardware_legacy.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libmtkisp_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkisp_metadata.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtklimiter_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtklimiter_vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtkmipc-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkmipc-ril.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libmtknetcap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtknetcap.so \
@@ -1433,6 +2719,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libnxp_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnxp_extamp_intf.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libperfctl_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfctl_vendor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libportrait_repair_ppl3_ocl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libportrait_repair_ppl3_ocl.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libpower_timer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpower_timer.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libpowerhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowerhal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libpowerhalwrap_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowerhalwrap_vendor.so \
@@ -1441,16 +2728,27 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqparamparser.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqpconfig.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libratconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libratconfig.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/librgbwlightsensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librgbwlightsensor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/librilfusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilfusion.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/librt_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librt_extamp_intf.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libsegmention.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsegmention.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libsegmentionPre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsegmentionPre.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libsensor_custom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_custom.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libsmartdetector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsmartdetector.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeech_enh_lib.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeechparser_vendor.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libst_mobile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libst_mobile.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libstblur_capture_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstblur_capture_api.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libstereoinfoaccessor_vsdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstereoinfoaccessor_vsdof.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libstorage_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstorage_otp.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysenv.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtf_asd_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtf_asd_lib.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtflite_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_mtk.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtflite_native_gainference.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_native_gainference.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtflite_native_inference.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_native_inference.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtflite_native_seginference.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_native_seginference.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libthha.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthha.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtlcWidevineModularDrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlcWidevineModularDrm.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtneclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtneclient.so \
@@ -1459,6 +2757,8 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtranslator_mapi_v3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mapi_v3.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtranslator_mdmi_v2.8.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mdmi_v2.8.2.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtranslator_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_utils.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtranssion_bodybeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranssion_bodybeauty.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libtranssion_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranssion_cal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libtrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrm.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libudf.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/liburee_meta_drmkeyinstall.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liburee_meta_drmkeyinstall.so \
@@ -1468,8 +2768,13 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvia-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvia-ril.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libviamipc-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libviamipc-ril.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvibrator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvibrator.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libvideofilter_cl_64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideofilter_cl_64.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu5.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwa_depth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_depth.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwa_dof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_dof.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwa_refocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_refocus.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libwa_rtdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_rtdof.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libwifitest.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifitest.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
@@ -1492,8 +2797,30 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/libneuron_runtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/libneuron_runtime.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/libnir_neon_driver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/libnir_neon_driver.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/mt6893/libpq_prot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mt6893/libpq_prot.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/mtk000_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mtk000_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/nfc_nci.st21nfc.st.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci.st21nfc.st.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/nwk_opt_imp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nwk_opt_imp.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcgc02m1_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcgc02m1_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcgc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcgc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcgc02m1macro_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcgc02m1macro_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcgc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcgc02m1macro_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcs5kgd2sp_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcs5kgd2sp_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcs5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcs5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcs5khm6sx_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcs5khm6sx_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pblcs5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pblcs5khm6sx_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbrogc02m1_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbrogc02m1_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbrogc02m1_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbrogc02m1_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbrogc02m1macro_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbrogc02m1macro_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbrogc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbrogc02m1macro_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbros5kgd2sp_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbros5kgd2sp_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbros5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbros5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbros5khm6sx_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbros5khm6sx_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/pbros5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pbros5khm6sx_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/s5kgd2sp_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kgd2sp_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/s5kgd2sp_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kgd2sp_mipi_raw_tuning.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/s5khm6sx_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5khm6sx_mipi_raw_IdxMgr.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/s5khm6sx_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5khm6sx_mipi_raw_tuning.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/soundfx/libaudiopreprocessing_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing_mtk.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/soundfx/libdtsaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdtsaudio.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.apmonitor@2.0.so \
@@ -1507,6 +2834,15 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.biometrics.fingerprint@2.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.atms@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.security@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.clientapi@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.composer_ext@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.dmc@1.0.so \
@@ -1555,6 +2891,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.tranHwInfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.tranHwInfo@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.videotelephony@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.tne.tneengine@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.tne.tneengine@1.0.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.tranlog@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.tranlog@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.tranlogconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.tranlogconfig@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/vendor.transsion.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.transsion.hardware.wifi.hostapd@1.0.so \
@@ -1590,4 +2927,5 @@ PRODUCT_PACKAGES += \
     manifest_media_c2_V1_1_default \
     manifest_tneengine \
     vendor.mediatek.hardware.tranHwInfo@1.0 \
+    vendor.transsion.hardware.trancam.trancamserver@1.0 \
     vibrator-mtk-default
