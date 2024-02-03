@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service.trustonic \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.lights-service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.lights-service.mediatek \
-    vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek-64b \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron \
     vendor/infinix/X6739/proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service-st:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.nfc@1.2-service-st \
