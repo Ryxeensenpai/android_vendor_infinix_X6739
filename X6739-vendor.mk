@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/system/lib64/libvcodec_cap.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_cap.so \
     vendor/infinix/X6739/proprietary/system/lib64/libvcodec_capenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_capenc.so \
     vendor/infinix/X6739/proprietary/system/lib64/libvt_avsync.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvt_avsync.so \
+    vendor/infinix/X6739/proprietary/system_ext/lib64/libArcFilter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libArcFilter.so \
     vendor/infinix/X6739/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/infinix/X6739/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/infinix/X6739/proprietary/vendor/app/mcRegistry/035c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/035c0000000000000000000000000000.drbin \
@@ -2470,6 +2471,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
+    vendor/infinix/X6739/proprietary/vendor/lib64/libcalculatesharpness.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcalculatesharpness.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcam.afhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.afhal.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcam.chdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.chdr.so \
     vendor/infinix/X6739/proprietary/vendor/lib64/libcam.feature_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.feature_utils.so \
