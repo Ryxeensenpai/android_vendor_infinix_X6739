@@ -46,12 +46,12 @@
  <Param name="MTK_AUDIO_A2DP_LATENCY_IMPROVE" value="yes" />
  <Param name="MTK_BT_HEARING_AID_SUPPORT" value="yes" />
  <Param name="MTK_SPK_AP_SWMIX_PROCESS" value="yes" />
- <Param name="MTK_AUDIODSP_SUPPORT" value="no" />
+ <Param name="MTK_AUDIODSP_SUPPORT" value="yes" />
  <Param name="MTK_INCALL_HANDSFREE_DMNR" value="yes" />
  <Param name="MTK_VOW_SUPPORT" value="no" />
  <Param name="MTK_VOW_AMAZON_SUPPORT" value="no" />
  <Param name="MTK_VOW_GVA_SUPPORT" value="no" />
- <Param name="MTK_VOW_DUAL_MIC_SUPPORT" value="no" />
+ <Param name="MTK_VOW_DUAL_MIC_SUPPORT" value="yes" />
  <Param name="MTK_VOW_MAX_PDK_NUMBER" value="2" />
  <Param name="MTK_VOW_MULTI_KEYPHRASE_SUPPORT" value="" />
  <Param name="MTK_VOW_SINGLE_MIC_SELECT" value="" />
@@ -61,11 +61,15 @@
  <Param name="TRAN_DUALSPK_BY_HS_LOL" value="yes" />
  <Param name="MTK_BESLOUNDNESS_SUPPORT" value="" />
  <Param name="TRAN_AW87XXX_PA" value="" />
+ <Param name="TRAN_FOUR_AW87XXX_PA" value="" />
  <Param name="TRAN_AWINIC_EFFECT_SUPPORT" value="yes" />
  <Param name="TRAN_AUDIO_UL_IG1206" value="" />
  <Param name="TRAN_AUDIO_DUAL_FS1559" value="" />
  <Param name="TRAN_AUDIO_FM_PA_MODE" value="" />
  <Param name="TRAN_AW87390_SCENE" value="yes" />
+ <Param name="TRAN_TYPEC_HEADSET_SUPPORT" value="" />
+ <Param name="USE_BUILTINMIC_IN_LOUDSPK" value="" />
+ <Param name="TRAN_AUDIO_NUMBER_OF_MIC" value="" />
  <Param name="VIR_WIFI_ONLY_SUPPORT" value="no" />
  <Param name="VIR_3G_DATA_ONLY_SUPPORT" value="no" />
  <Param name="VIR_ASR_SUPPORT" value="no" />

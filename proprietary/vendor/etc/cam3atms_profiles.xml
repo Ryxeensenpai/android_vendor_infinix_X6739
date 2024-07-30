@@ -62,11 +62,6 @@
             eApp="App_MagicSky"
             />
 
-        <Package name="com.transsion.camera"
-            featureName="TranCamMode_SuperNight"
-            eApp="App_SuperNight"
-            />
-
         <!--3PartyMode, some special mode-->
         <Package name="com.transsion.camera"
             featureName="TranCamMode_EXT_360VideoHDR"
@@ -187,6 +182,41 @@
         <Package name="hd.camera"
             featureName="TranCamMode_UnKown"
             eApp="App_HdCamera"
+            />
+
+        <Package name="com.zhiliaoapp.musically.go"
+            featureName="TranCamMode_UnKown"
+            eApp="App_TikTok_Lite"
+            />
+
+        <Package name="com.zhiliaoapp.musically.go"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
+            />
+
+        <Package name="com.transsion.camkitdemo"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
+            />
+
+        <Package name="com.facebook.orca"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
+            />
+
+        <Package name="com.snapchat.android"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
+            />
+
+        <Package name="com.whatsapp"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
+            />
+
+        <Package name="us.zoom.videomeetings"
+            featureName="TranCamMode_EXT_360VideoHDR"
+            eApp="App_360VideoHDR"
             />
 
 </TranCamAtmsProfiles>

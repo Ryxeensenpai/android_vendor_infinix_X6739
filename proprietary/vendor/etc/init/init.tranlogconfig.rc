@@ -1,4 +1,4 @@
-on boot
+on early-boot
     chown system system /dev/tranlog_reg
     chmod 0666 /dev/tranlog_reg
     chown system system /dev/tranlog_config
@@ -6,7 +6,7 @@ on boot
     chown system system /dev/tranlog_cloudctl
     chmod 0666 /dev/tranlog_cloudctl
 
-on property:sys.boot_completed=1
+on boot
     start vendor.tranlogconfig
 
 service vendor.tranlogconfig /vendor/bin/tranlogconfig

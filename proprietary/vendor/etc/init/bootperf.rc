@@ -79,3 +79,9 @@ on property:sys.boot_completed=* && property:persist.vendor.boot_trace=1
    #force to disable boot ftrace after boot complete.
    write /sys/devices/system/cpu/perf/enable 0
    write /sys/kernel/tracing/tracing_on 0
+   
+#SPD: add default cpushares for bootcompleted at 20240510 start
+on property:sys.boot_completed=1
+   write /dev/cpuctl/top-app/cpu.shares 5120
+   write /dev/cpuctl/foreground/cpu.shares 4196
+#SPD: add default cpushares for bootcompleted at 20240510 end

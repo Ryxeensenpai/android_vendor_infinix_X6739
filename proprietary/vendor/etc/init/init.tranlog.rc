@@ -1,4 +1,4 @@
-on boot
+on early-boot
     chown system system /dev/tranlog_kernel
     chmod 0666 /dev/tranlog_kernel
     chown system system /dev/tranlog_user
@@ -11,7 +11,7 @@ on boot
 on post-fs-data
     mkdir /data/vendor/tranlog/ 0755 system system
 
-on property:sys.boot_completed=1
+on boot
     start tranlog
 
 service tranlog /vendor/bin/tranlog

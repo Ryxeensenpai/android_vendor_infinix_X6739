@@ -158,6 +158,15 @@
             fpsRange=""
             />
         <!--[ITD] modify for XLBELB-923 by zhiben.zou 20220711 end-->
+	<!--[ITD] modify for X6853H895-5422 by xuelong.chen 20231201 start-->
+	<!--Selfie Camera iphone 13-->
+        <Package name="tapstudio.photoremove.unwanted.object"
+            supportedPreviewSizes=""
+            supportedVideoSizes=""
+            supportedPictureSizes="1920x1080,1280x720,960x720,960x540,720x480,704x704,640x480,352x288,320x240,176x144"
+            fpsRange=""
+            />
+        <!--[ITD] modify for X6853H895-5422 by xuelong.chen 20231201 end-->
 <!--API1 End-->
 
 <!--

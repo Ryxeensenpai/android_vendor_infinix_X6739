@@ -117,6 +117,13 @@ on post-fs-data
     chmod 0660 /dev/cpuctl/system-background/cpu.uclamp.max
     chown system system /dev/cpuset/top-app/cpus
     chmod 0660 /dev/cpuset/top-app/cpus
+    #SPD: add for control dex2oat cpu by fan.feng1 20230619 start
+    chown system system /dev/cpuset/dex2oat/cpus
+    chmod 0660 /dev/cpuset/dex2oat/cpus
+    #SPD: add for control dex2oat cpu by fan.feng1 20230619 end
+    #SPD: add fg cpuset cmd by sifengtian 202416 start
+    chmod 0660 /dev/cpuset/foreground/cpus
+    #SPD: add fg cpuset cmd by sifengtian 202416 end
     chown system system /sys/devices/system/cpu/cpufreq/policy0/up_rate_limit_us
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/up_rate_limit_us
     chown system system /sys/devices/system/cpu/cpufreq/policy0/down_rate_limit_us
@@ -145,6 +152,22 @@ on post-fs-data
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy6/sugov_ext/down_rate_limit_us
     chown system system /sys/devices/system/cpu/cpufreq/policy7/sugov_ext/down_rate_limit_us
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/sugov_ext/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
     chown system system /sys/module/mtk_core_ctl/parameters/policy_enable
     chmod 0660 /sys/module/mtk_core_ctl/parameters/policy_enable
     chown system system /sys/devices/system/cpu/sched_ctl/sched_core_pause_info
@@ -153,6 +176,10 @@ on post-fs-data
     chmod 0660 /sys/devices/system/cpu/cpufreq/sugov_ext/up_rate_limit_us
     chown system system /sys/devices/system/cpu/cpufreq/sugov_ext/down_rate_limit_us
     chmod 0660 /sys/devices/system/cpu/cpufreq/sugov_ext/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpu4/core_ctl/up_thres
+    chmod 0660 /sys/devices/system/cpu/cpu4/core_ctl/up_thres
+    chown system system /sys/devices/system/cpu/cpu4/core_ctl/thermal_up_thres
+    chmod 0660 /sys/devices/system/cpu/cpu4/core_ctl/thermal_up_thres
 
 # Task turbo
     chown system system /sys/module/task_turbo/parameters/feats
@@ -706,6 +733,8 @@ on post-fs-data
     chmod 0664 /sys/module/mtk_fpsgo/parameters/loading_enable
     chown system system /sys/kernel/fpsgo/fbt/blc_boost
     chmod 0660 /sys/kernel/fpsgo/fbt/blc_boost
+    chown system system sys/module/mtk_fpsgo/parameters/bhr_opp_l
+    chmod 0660 sys/module/mtk_fpsgo/parameters/bhr_opp_l
 
 # NET
     chown system system /proc/net/wlan/setCAM
@@ -816,3 +845,5 @@ on property:persist.sys.power_mode.lmode=*
 on property:persist.vendor.powerhal.tran_launche_activity=*
     write /sys/module/binder/parameters/rt_mask ${persist.vendor.powerhal.tran_launche_activity}
 #SPD: add for launche rt prio extend by rui.fu 20230117 end
+on property:persist.vendor.powerhal.dex2oat_threads=*
+   setprop persist.sys.dex2oat.threads ${persist.vendor.powerhal.dex2oat_threads}
