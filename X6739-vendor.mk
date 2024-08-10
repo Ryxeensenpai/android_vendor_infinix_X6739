@@ -33,8 +33,10 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/system/lib64/libvcodec_cap.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_cap.so \
     vendor/infinix/X6739/proprietary/system/lib64/libvcodec_capenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_capenc.so \
     vendor/infinix/X6739/proprietary/system/lib64/libvt_avsync.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvt_avsync.so \
+    vendor/infinix/X6739/proprietary/system_ext/lib/libaudiotoolkit.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudiotoolkit.so \
     vendor/infinix/X6739/proprietary/system/lib/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.mediatek.hardware.videotelephony@1.0.so \
     vendor/infinix/X6739/proprietary/system_ext/lib64/libArcFilter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libArcFilter.so \
+    vendor/infinix/X6739/proprietary/system_ext/lib64/libaudiotoolkit.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudiotoolkit.so \
     vendor/infinix/X6739/proprietary/system/lib64/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.videotelephony@1.0.so \
     vendor/infinix/X6739/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/infinix/X6739/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
