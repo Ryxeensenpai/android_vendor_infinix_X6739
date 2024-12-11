@@ -2306,7 +2306,7 @@ PRODUCT_PACKAGES += \
     lights-mtk-default \
     manifest_android.hardware.drm@1.4-service.widevine \
     manifest_hwcomposer \
-    manifest_media_c2_V1_1_default \
+    manifest_media_c2_V1_2_default \
     manifest_tneengine \
     vendor.mediatek.hardware.tranHwInfo@1.0 \
     vendor.transsion.hardware.trancam.trancamserver@1.0
