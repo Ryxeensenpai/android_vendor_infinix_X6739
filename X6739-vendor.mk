@@ -208,7 +208,6 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
-    vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
@@ -327,7 +326,6 @@ PRODUCT_PACKAGES += \
     VP9SecureVdecCA_510 \
     libAVCSecureVencCA_510 \
     libTEECommon \
-    libadpcmdec_mtk \
     libaedv \
     libapu_mdw \
     libapu_mdw_batch \
@@ -339,11 +337,6 @@ PRODUCT_PACKAGES += \
     libcarrierconfig \
     libccci_util \
     libcodec2_mtk_c2store \
-    libcodec2_soft_mtk_alacdec \
-    libcodec2_soft_mtk_apedec \
-    libcodec2_soft_mtk_imaadpcmdec \
-    libcodec2_soft_mtk_mp3dec \
-    libcodec2_soft_mtk_msadpcmdec \
     libcodec2_vpp_qt_plugin \
     libcodec2_vpp_rs_plugin \
     libfgauge_gm30 \
@@ -356,7 +349,6 @@ PRODUCT_PACKAGES += \
     libipsec_ims_shr \
     libladder \
     libmnetlink_v104 \
-    libmp3dec_mtk \
     libmtcloader \
     libmtkares \
     libmtkcutils \
@@ -365,10 +357,8 @@ PRODUCT_PACKAGES += \
     libmtkproperty \
     libmtkrillog \
     libmtksysutils \
-    libperfctl_vendor \
     libsimlock \
     libsimmelock \
-    libstagefrighthw \
     libsysenv \
     libthha \
     libvcodec_oal \
@@ -414,7 +404,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
-    android.hardware.sensors@2.X-subhal-mediatek \
     audio.primary.mt6893 \
     audio.r_submix.mt6893 \
     gf_fingerprint.default \
@@ -1146,7 +1135,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service.trustonic \
     android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks@1.3-service-mtk-neuron \
-    android.hardware.sensors@2.0-service.multihal-mediatek \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \

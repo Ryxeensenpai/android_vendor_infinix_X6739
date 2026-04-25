@@ -296,49 +296,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadpcmdec_mtk",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libadpcmdec_mtk.so",
-            ],
-            shared_libs: [
-                "libmtk_drvb",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadpcmdec_mtk.so",
-            ],
-            shared_libs: [
-                "libmtk_drvb",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaedv",
     owner: "infinix",
     strip: {
@@ -799,283 +756,6 @@ cc_prebuilt_library_shared {
                 "libion",
                 "libion_mtk",
                 "libdmabufheap",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_mtk_alacdec",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcodec2_soft_mtk_alacdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_mtk_alacdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_mtk_apedec",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcodec2_soft_mtk_apedec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_mtk_apedec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_mtk_imaadpcmdec",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcodec2_soft_mtk_imaadpcmdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libadpcmdec_mtk",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libadpcmdec_mtk",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_mtk_mp3dec",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcodec2_soft_mtk_mp3dec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libmp3dec_mtk",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_mtk_mp3dec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libmp3dec_mtk",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_mtk_msadpcmdec",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcodec2_soft_mtk_msadpcmdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libadpcmdec_mtk",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so",
-            ],
-            shared_libs: [
-                "libcodec2_soft_common",
-                "libcodec2_vndk",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libbase",
-                "libcodec2",
-                "libcodec2_mtk_c2store",
-                "libadpcmdec_mtk",
-                "libmtk_drvb",
                 "libc++",
                 "libc",
                 "libm",
@@ -1605,49 +1285,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmp3dec_mtk",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libmp3dec_mtk.so",
-            ],
-            shared_libs: [
-                "libmtk_drvb",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmp3dec_mtk.so",
-            ],
-            shared_libs: [
-                "libmtk_drvb",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmtcloader",
     owner: "infinix",
     strip: {
@@ -1952,51 +1589,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libperfctl_vendor",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libperfctl_vendor.so",
-            ],
-            shared_libs: [
-                "libc",
-                "libcutils",
-                "libui",
-                "libutils",
-                "libexpat",
-                "liblog",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libperfctl_vendor.so",
-            ],
-            shared_libs: [
-                "libc",
-                "libcutils",
-                "libui",
-                "libutils",
-                "libexpat",
-                "liblog",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsimlock",
     owner: "infinix",
     strip: {
@@ -2066,51 +1658,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libstagefrighthw",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libstagefrighthw.so",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libui",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libstagefrighthw.so",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libui",
                 "libc++",
                 "libc",
                 "libm",
@@ -3561,44 +3108,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.sensors@2.X-subhal-mediatek",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so",
-            ],
-            shared_libs: [
-                "android.hardware.sensors@1.0-convert-shared",
-                "android.hardware.sensors@1.0",
-                "android.hardware.sensors@2.0",
-                "android.hardware.sensors@2.0-ScopedWakelock",
-                "android.hardware.sensors@2.1",
-                "libbase",
-                "libutils",
-                "libcutils",
-                "libfmq",
-                "libhardware",
-                "libhidlbase",
-                "liblog",
-                "libpower",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "audio.primary.mt6893",
     owner: "infinix",
     strip: {
@@ -3620,7 +3129,7 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "libaudioutils",
                 "libtinyalsa",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libaudiotoolkit_vendor",
                 "libmedia_helper",
                 "libladder",
@@ -4339,7 +3848,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libpq_prot",
                 "libhidlmemory",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "vendor.mediatek.hardware.pq@2.0",
                 "vendor.mediatek.hardware.pq@2.1",
                 "vendor.mediatek.hardware.pq@2.2",
@@ -20515,7 +20024,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libtinyalsa",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "liblog",
                 "libnvram",
                 "libcrypto",
@@ -24980,41 +24489,6 @@ cc_prebuilt_binary {
                 "libion_mtk",
                 "libcutils",
                 "libneuron_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.sensors@2.0-service.multihal-mediatek",
-    owner: "infinix",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek",
-            ],
-            shared_libs: [
-                "android.hardware.sensors@2.0",
-                "android.hardware.sensors@2.0-ScopedWakelock",
-                "android.hardware.sensors@2.1",
-                "libbase",
-                "libcutils",
-                "libfmq",
-                "libhidlbase",
-                "liblog",
-                "libpower",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
