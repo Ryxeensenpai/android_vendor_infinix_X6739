@@ -174,6 +174,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/cam3atms_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cam3atms_profiles.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/cust_silky_brightness.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_silky_brightness.xml \
+    vendor/infinix/X6739/proprietary/vendor/etc/dar_thermal_core/thermal_core_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/dar_thermal_core/thermal_core_config.json \
     vendor/infinix/X6739/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
     vendor/infinix/X6739/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
@@ -208,6 +209,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.mtk.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
@@ -217,6 +219,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.connfem.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.connfem.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.conninfra.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.conninfra.rc \
+    vendor/infinix/X6739/proprietary/vendor/etc/init/init.frs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.frs.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.gps_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_drv.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal.rc \
     vendor/infinix/X6739/proprietary/vendor/etc/init/init.thermal_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal_core.rc \
@@ -349,7 +352,6 @@ PRODUCT_PACKAGES += \
     libipsec_ims_shr \
     libladder \
     libmnetlink_v104 \
-    libmtcloader \
     libmtkares \
     libmtkcutils \
     libmtkhardware_legacy \
@@ -378,7 +380,6 @@ PRODUCT_PACKAGES += \
     libmp4enc_xa.ca7 \
     librcs_interface \
     librcs_volte_core \
-    libthermalalgo \
     libvcodec_utility_v3a \
     libvcodecdrv_v3a \
     libvp8dec_sa.ca7 \
@@ -404,6 +405,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
+    android.hardware.thermal@2.0-impl \
     audio.primary.mt6893 \
     audio.r_submix.mt6893 \
     gf_fingerprint.default \
@@ -416,6 +418,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     vulkan.mali \
     sensors.mt6893 \
+    thermal_hal \
     vendor.mediatek.hardware.camera.atms@1.0-impl \
     vendor.mediatek.hardware.camera.bgservice@1.1-impl \
     vendor.mediatek.hardware.camera.isphal@1.0-impl \
@@ -424,7 +427,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
     vendor.mediatek.hardware.pq@2.15-impl \
-    vendor.mediatek.hardware.videotelephony@1.0-impl \
+    vendor.mediatek.hardware.videotelephony@1.0-impl_vendor \
     lbs_hidl_service-impl \
     lib3a.ae.core \
     lib3a.ae \
@@ -886,6 +889,7 @@ PRODUCT_PACKAGES += \
     libmpbase \
     libmsbc_mtk \
     libmsnr \
+    libmtcloader \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
     libmtkcam.atmseventmgr \
@@ -1106,7 +1110,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.7 \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
-    vendor.mediatek.hardware.videotelephony@1.0 \
+    vendor.mediatek.hardware.videotelephony@1.0_vendor \
     vendor.transsion.hardware.trancam.trancamserver@1.0 \
     vendor.trustonic.tee.tui@1.0 \
     vendor.trustonic.tee@1.0 \
@@ -1124,6 +1128,7 @@ PRODUCT_PACKAGES += \
     ccci_mdinit \
     ccci_rpcd \
     conninfra_loader \
+    frs \
     fuelgauged \
     fuelgauged_nvram \
     gsm0710muxd \
@@ -1135,6 +1140,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service.trustonic \
     android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks@1.3-service-mtk-neuron \
+    android.hardware.thermal@2.0-service.mtk \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \

@@ -1285,45 +1285,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmtcloader",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libmtcloader.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmtcloader.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmtkares",
     owner: "infinix",
     strip: {
@@ -2293,33 +2254,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libthermalalgo",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libthermalalgo.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvcodec_utility_v3a",
     owner: "infinix",
     strip: {
@@ -3108,6 +3042,39 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.thermal@2.0-impl",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/android.hardware.thermal@2.0-impl.so",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libhardware",
+                "libbase",
+                "libcutils",
+                "libutils",
+                "libhidlbase",
+                "android.hardware.thermal@1.0",
+                "android.hardware.thermal@2.0",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "audio.primary.mt6893",
     owner: "infinix",
     strip: {
@@ -3559,6 +3526,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "thermal_hal",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/thermal_hal.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.camera.atms@1.0-impl",
     owner: "infinix",
     strip: {
@@ -3889,7 +3884,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0-impl",
+    name: "vendor.mediatek.hardware.videotelephony@1.0-impl_vendor",
+    stem: "vendor.mediatek.hardware.videotelephony@1.0-impl",
     owner: "infinix",
     strip: {
         none: true,
@@ -3902,7 +3898,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libhidlbase",
                 "libfmq",
-                "vendor.mediatek.hardware.videotelephony@1.0",
+                "vendor.mediatek.hardware.videotelephony@1.0_vendor",
                 "libc",
                 "libutils",
                 "libcutils",
@@ -16602,6 +16598,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmtcloader",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmtcloader.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmtk-fusion-ril-prop-vsim",
     owner: "infinix",
     strip: {
@@ -23805,7 +23827,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0",
+    name: "vendor.mediatek.hardware.videotelephony@1.0_vendor",
+    stem: "vendor.mediatek.hardware.videotelephony@1.0",
     owner: "infinix",
     strip: {
         none: true,
@@ -24106,6 +24129,35 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libcutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "frs",
+    owner: "infinix",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/frs",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libifcutils_mtk",
+                "libmipc",
                 "libc++",
                 "libc",
                 "libm",
@@ -24506,6 +24558,39 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.thermal@2.0-service.mtk",
+    owner: "infinix",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.thermal@2.0-service.mtk",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libhardware",
+                "libcutils",
+                "libbase",
+                "libhidlbase",
+                "libutils",
+                "android.hardware.thermal@2.0",
+                "android.hardware.thermal@1.0",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "camerahalserver",
     owner: "infinix",
     target: {
@@ -24871,7 +24956,7 @@ cc_prebuilt_binary {
                 "liblog",
                 "libbase",
                 "libfmq",
-                "vendor.mediatek.hardware.videotelephony@1.0",
+                "vendor.mediatek.hardware.videotelephony@1.0_vendor",
                 "libhardware",
                 "libhwbinder",
                 "libhidlbase",
