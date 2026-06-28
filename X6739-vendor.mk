@@ -427,7 +427,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
     vendor.mediatek.hardware.pq@2.15-impl \
-    vendor.mediatek.hardware.videotelephony@1.0-impl_vendor \
+    vendor.mediatek.hardware.videotelephony@1.0-impl \
     lbs_hidl_service-impl \
     lib3a.ae.core \
     lib3a.ae \
@@ -1110,7 +1110,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.7 \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
-    vendor.mediatek.hardware.videotelephony@1.0_vendor \
+    vendor.mediatek.hardware.videotelephony@1.0 \
     vendor.transsion.hardware.trancam.trancamserver@1.0 \
     vendor.trustonic.tee.tui@1.0 \
     vendor.trustonic.tee@1.0 \
