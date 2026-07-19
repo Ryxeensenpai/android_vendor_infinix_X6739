@@ -3,4 +3,15 @@
 #
 
 AB_OTA_PARTITIONS += \
-    lk
+    dpm \
+    gz \
+    lk \
+    logo \
+    mcupm \
+    md1img \
+    pi_img \
+    scp \
+    spmfw \
+    sspm \
+    tee \
+    tkv
